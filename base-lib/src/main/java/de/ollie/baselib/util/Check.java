@@ -1,4 +1,4 @@
-package de.ollie.bptracker.util;
+package de.ollie.baselib.util;
 
 import java.util.function.Supplier;
 import lombok.Generated;

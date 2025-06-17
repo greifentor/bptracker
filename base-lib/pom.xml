@@ -10,7 +10,7 @@
 		<version>0.0.1</version>
 	</parent>
 
-	<artifactId>bptracker-base-lib</artifactId>
+	<artifactId>base-lib</artifactId>
 	<packaging>jar</packaging>
 
 	<name>BP-Tracker (Base-Lib)</name>
