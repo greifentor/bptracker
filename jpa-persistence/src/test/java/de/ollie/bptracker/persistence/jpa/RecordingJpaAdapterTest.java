@@ -14,8 +14,10 @@ import org.mockito.junit.jupiter.MockitoExtension;
 @ExtendWith(MockitoExtension.class)
 class RecordingJpaAdapterTest {
 
+	private static final String COMMENT = "comment";
 	private static final LocalDate DATE_OF_RECORDING = LocalDate.of(2025, 6, 17);
 	private static final int DIA_MM_HG = 70;
+	private static final String MEDICATION = "medication";
 	private static final int PULSE_PER_MINUTE = 60;
 	private static final RecordingState STATE = RecordingState.GREEN;
 	private static final int SYS_MM_HG = 130;
@@ -31,7 +33,17 @@ class RecordingJpaAdapterTest {
 		void throwsAnException_passingANullValue_asDateOfRecording() {
 			assertThrows(
 				IllegalArgumentException.class,
-				() -> unitUnderTest.create(SYS_MM_HG, DIA_MM_HG, PULSE_PER_MINUTE, STATE, null, TIME_OF_RECORDING)
+				() ->
+					unitUnderTest.create(
+						SYS_MM_HG,
+						DIA_MM_HG,
+						PULSE_PER_MINUTE,
+						STATE,
+						null,
+						TIME_OF_RECORDING,
+						COMMENT,
+						MEDICATION
+					)
 			);
 		}
 
@@ -39,7 +51,17 @@ class RecordingJpaAdapterTest {
 		void throwsAnException_passingAValueLesserThanOne_asDiaMmHg() {
 			assertThrows(
 				IllegalArgumentException.class,
-				() -> unitUnderTest.create(SYS_MM_HG, 0, PULSE_PER_MINUTE, STATE, DATE_OF_RECORDING, TIME_OF_RECORDING)
+				() ->
+					unitUnderTest.create(
+						SYS_MM_HG,
+						0,
+						PULSE_PER_MINUTE,
+						STATE,
+						DATE_OF_RECORDING,
+						TIME_OF_RECORDING,
+						COMMENT,
+						MEDICATION
+					)
 			);
 		}
 
@@ -47,7 +69,17 @@ class RecordingJpaAdapterTest {
 		void throwsAnException_passingAValueLesserThanOne_asPulsePerMinute() {
 			assertThrows(
 				IllegalArgumentException.class,
-				() -> unitUnderTest.create(SYS_MM_HG, DIA_MM_HG, 0, STATE, DATE_OF_RECORDING, TIME_OF_RECORDING)
+				() ->
+					unitUnderTest.create(
+						SYS_MM_HG,
+						DIA_MM_HG,
+						0,
+						STATE,
+						DATE_OF_RECORDING,
+						TIME_OF_RECORDING,
+						COMMENT,
+						MEDICATION
+					)
 			);
 		}
 
@@ -55,7 +87,17 @@ class RecordingJpaAdapterTest {
 		void throwsAnException_passingANullValue_asState() {
 			assertThrows(
 				IllegalArgumentException.class,
-				() -> unitUnderTest.create(SYS_MM_HG, DIA_MM_HG, PULSE_PER_MINUTE, null, DATE_OF_RECORDING, TIME_OF_RECORDING)
+				() ->
+					unitUnderTest.create(
+						SYS_MM_HG,
+						DIA_MM_HG,
+						PULSE_PER_MINUTE,
+						null,
+						DATE_OF_RECORDING,
+						TIME_OF_RECORDING,
+						COMMENT,
+						MEDICATION
+					)
 			);
 		}
 
@@ -63,7 +105,17 @@ class RecordingJpaAdapterTest {
 		void throwsAnException_passingAValueLesserThanOne_asSysMmHg() {
 			assertThrows(
 				IllegalArgumentException.class,
-				() -> unitUnderTest.create(0, DIA_MM_HG, PULSE_PER_MINUTE, STATE, DATE_OF_RECORDING, TIME_OF_RECORDING)
+				() ->
+					unitUnderTest.create(
+						0,
+						DIA_MM_HG,
+						PULSE_PER_MINUTE,
+						STATE,
+						DATE_OF_RECORDING,
+						TIME_OF_RECORDING,
+						COMMENT,
+						MEDICATION
+					)
 			);
 		}
 	}

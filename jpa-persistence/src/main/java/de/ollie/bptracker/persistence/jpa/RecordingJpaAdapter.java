@@ -19,7 +19,9 @@ class RecordingJpaAdapter implements RecordingPersistencePort {
 		int pulsePerMinute,
 		RecordingState state,
 		LocalDate dateOfRecording,
-		LocalTime timeOfRecording
+		LocalTime timeOfRecording,
+		String comment,
+		String medication
 	) {
 		ensure(dateOfRecording != null, "Date of recording cannot be null!");
 		ensure(diaMmHg > 0, "DiaMmHg cannot be lesser then 1!");

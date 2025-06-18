@@ -6,12 +6,14 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 public interface RecordingService {
-	Recording create(
+	Recording createRecording(
 		int sysMmHg,
 		int diaMmHg,
 		int pulsePerMinute,
 		RecordingState state,
 		LocalDate dateOfRecording,
-		LocalTime timeOfRecording
+		LocalTime timeOfRecording,
+		String comment,
+		String medication
 	);
 }

@@ -12,6 +12,8 @@ public interface RecordingPersistencePort {
 		int pulsePerMinute,
 		RecordingState state,
 		LocalDate dateOfRecording,
-		LocalTime timeOfRecording
+		LocalTime timeOfRecording,
+		String comment,
+		String medication
 	);
 }
