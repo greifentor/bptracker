@@ -22,19 +22,8 @@ public class RecordingServiceImpl implements RecordingService {
 		int pulsePerMinute,
 		RecordingState state,
 		LocalDate dateOfRecording,
-		LocalTime timeOfRecording,
-		String comment,
-		String medication
+		LocalTime timeOfRecording
 	) {
-		return recordingPersistencePort.create(
-			sysMmHg,
-			diaMmHg,
-			pulsePerMinute,
-			state,
-			dateOfRecording,
-			timeOfRecording,
-			comment,
-			medication
-		);
+		return recordingPersistencePort.create(sysMmHg, diaMmHg, pulsePerMinute, state, dateOfRecording, timeOfRecording);
 	}
 }

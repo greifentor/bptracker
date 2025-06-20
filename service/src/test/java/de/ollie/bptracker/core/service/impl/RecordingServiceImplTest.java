@@ -49,9 +49,7 @@ class RecordingServiceImplTest {
 					DIA_MM_HG,
 					STATE,
 					DATE_OF_RECORDING,
-					TIME_OF_RECORDING,
-					COMMENT,
-					MEDICATION
+					TIME_OF_RECORDING
 				)
 			)
 				.thenReturn(recording);
@@ -62,9 +60,7 @@ class RecordingServiceImplTest {
 				DIA_MM_HG,
 				STATE,
 				DATE_OF_RECORDING,
-				TIME_OF_RECORDING,
-				COMMENT,
-				MEDICATION
+				TIME_OF_RECORDING
 			);
 			// Check
 			assertSame(recording, returned);
