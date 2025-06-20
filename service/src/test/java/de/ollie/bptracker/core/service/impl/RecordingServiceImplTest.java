@@ -3,9 +3,9 @@ package de.ollie.bptracker.core.service.impl;
 import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.mockito.Mockito.when;
 
-import de.ollie.bptracker.core.service.model.Recording;
+import de.ollie.bptracker.core.service.model.BloodPressureMeasurement;
 import de.ollie.bptracker.core.service.model.RecordingState;
-import de.ollie.bptracker.core.service.port.persistence.RecordingPersistencePort;
+import de.ollie.bptracker.core.service.port.persistence.BloodPressureMeasurementPersistencePort;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import org.junit.jupiter.api.Nested;
@@ -28,10 +28,10 @@ class RecordingServiceImplTest {
 	private static final LocalTime TIME_OF_RECORDING = LocalTime.of(23, 31, 42);
 
 	@Mock
-	private Recording recording;
+	private BloodPressureMeasurement recording;
 
 	@Mock
-	private RecordingPersistencePort recordingPersistencePort;
+	private BloodPressureMeasurementPersistencePort recordingPersistencePort;
 
 	@InjectMocks
 	private RecordingServiceImpl unitUnderTest;
@@ -54,7 +54,7 @@ class RecordingServiceImplTest {
 			)
 				.thenReturn(recording);
 			// Run
-			Recording returned = unitUnderTest.createRecording(
+			BloodPressureMeasurement returned = unitUnderTest.createRecording(
 				SYS_MM_HG,
 				PULSE_PER_MINUTE,
 				DIA_MM_HG,

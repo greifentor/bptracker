@@ -7,7 +7,7 @@ import lombok.experimental.Accessors;
 
 @Accessors(chain = true)
 @Data
-public class Recording {
+public class BloodPressureMeasurement {
 
 	private LocalDate dateOfRecording;
 	private int diaMmHg;
