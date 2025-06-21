@@ -16,12 +16,10 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 @ExtendWith(MockitoExtension.class)
-class RecordingServiceImplTest {
+class BloodPressureMeasurementServiceImplTest {
 
-	private static final String COMMENT = "comment";
 	private static final LocalDate DATE_OF_RECORDING = LocalDate.of(2025, 6, 17);
 	private static final int DIA_MM_HG = 70;
-	private static final String MEDICATION = "medication";
 	private static final int PULSE_PER_MINUTE = 60;
 	private static final RecordingState STATE = RecordingState.GREEN;
 	private static final int SYS_MM_HG = 130;
@@ -34,7 +32,7 @@ class RecordingServiceImplTest {
 	private BloodPressureMeasurementPersistencePort recordingPersistencePort;
 
 	@InjectMocks
-	private RecordingServiceImpl unitUnderTest;
+	private BloodPressureMeasurementServiceImpl unitUnderTest;
 
 	@Nested
 	class createRecording_int_int_int_RecordingState_LocalDate_LocalTime_String_String {

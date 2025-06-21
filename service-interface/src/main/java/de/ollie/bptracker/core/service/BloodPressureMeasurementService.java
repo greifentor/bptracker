@@ -5,7 +5,7 @@ import de.ollie.bptracker.core.service.model.RecordingState;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-public interface RecordingService {
+public interface BloodPressureMeasurementService {
 	BloodPressureMeasurement createRecording(
 		int sysMmHg,
 		int diaMmHg,

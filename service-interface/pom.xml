@@ -6,14 +6,14 @@
 
 	<parent>
 		<groupId>de.ollie</groupId>
-		<artifactId>bptracker</artifactId>
+		<artifactId>health-tracker</artifactId>
 		<version>0.0.1</version>
 	</parent>
 
-	<artifactId>bptracker-service-interface</artifactId>
+	<artifactId>health-tracker-service-interface</artifactId>
 	<packaging>jar</packaging>
 
-	<name>BP-Tracker (Service-Interface)</name>
+	<name>Health-Tracker (Service-Interface)</name>
 	<description>The interface of the service and core module of the application.</description>
 
 	<properties>
@@ -24,7 +24,7 @@
 		<!-- bptracker-->
 		<dependency>
 			<groupId>de.ollie</groupId>
-			<artifactId>carp-bm-base-lib</artifactId>
+			<artifactId>base-lib</artifactId>
 			<version>0.0.1</version>
 		</dependency>
 		<!-- Spring -->

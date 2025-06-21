@@ -6,14 +6,14 @@
 
 	<parent>
 		<groupId>de.ollie</groupId>
-		<artifactId>bptracker</artifactId>
+		<artifactId>health-tracker</artifactId>
 		<version>0.0.1</version>
 	</parent>
 
 	<artifactId>base-lib</artifactId>
 	<packaging>jar</packaging>
 
-	<name>BP-Tracker (Base-Lib)</name>
+	<name>Health-Tracker (Base-Lib)</name>
 	<description>The base library of the application.</description>
 
 	<properties>
